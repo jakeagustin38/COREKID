@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ProfileHeader from '../components/ProfileHeader.astro';
+---
+
+<Layout title="UI/UX Journey - Jake Christon">
+	<main>
+		<ProfileHeader 
+			name="Jake Christon"
+			title="UI/UX Designer & BSIT Student"
+		/>
+
+		<p class="intro">
+			As a BSIT student passionate about creating meaningful digital experiences, 
+			I've learned that UI/UX design is more than just making things look pretty—it's about solving real problems.
+		</p>
+
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/learning-journey"
+				title="Learning Journey"
+				body="Discover my educational path and key insights in UI/UX design."
+			/>
+			<Card
+				href="/contributions"
+				title="My Contributions"
+				body="Projects and experiences that shaped my understanding of user-centered design."
+			/>
+			<Card
+				href="/roadmap"
+				title="UI/UX Roadmap"
+				body="A comprehensive guide to becoming a UI/UX designer."
+			/>
+			<Card
+				href="/case-studies/student-portal"
+				title="Student Portal Case Study"
+				body="Detailed case study of the student portal redesign project."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.intro {
+		text-align: center;
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		color: rgb(var(--accent-light));
+		background: rgba(var(--accent-dark), 0.2);
+		padding: 1.5rem;
+		border-radius: 1rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

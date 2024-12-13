@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfileHeader from '../components/ProfileHeader.astro';
+---
+
+<Layout title="My Documentation - Jake Christon">
+	<main>
+		<ProfileHeader 
+			name="Jake Christon"
+			title="UI/UX Designer & BSIT Student"
+		/>
+		
+		<section class="documentation">
+			<h2>My <span class="text-gradient">Documentation</span></h2>
+
+			<div class="doc-section">
+				<h3>Design Philosophy & Methodology</h3>
+				<div class="content-block">
+					<p>As a UI/UX designer, I follow a user-centered design approach that emphasizes:</p>
+					<ul>
+						<li><strong>Empathy-First Design:</strong> Understanding user needs through extensive research and persona development</li>
+						<li><strong>Iterative Process:</strong> Continuous improvement through feedback loops and user testing</li>
+						<li><strong>Accessibility:</strong> Ensuring designs are inclusive and accessible to all users</li>
+						<li><strong>Data-Driven Decisions:</strong> Using analytics and user feedback to inform design choices</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="doc-section">
+				<h3>UI/UX Learning Journey</h3>
+				<div class="content-block">
+					<h4>Core Principles Mastered:</h4>
+					<ul>
+						<li><strong>Visual Hierarchy:</strong> Creating clear, intuitive information hierarchies</li>
+						<li><strong>Interaction Design:</strong> Crafting seamless user flows and micro-interactions</li>
+						<li><strong>Information Architecture:</strong> Organizing content for optimal user navigation</li>
+						<li><strong>Responsive Design:</strong> Ensuring consistent experiences across devices</li>
+						<li><strong>Design Systems:</strong> Building scalable and maintainable component libraries</li>
+					</ul>
+
+					<h4>Technical Skills Acquired:</h4>
+					<ul>
+						<li><strong>Design Tools:</strong> Figma, Adobe XD, Sketch</li>
+						<li><strong>Prototyping:</strong> InVision, Principle, Framer</li>
+						<li><strong>Research Tools:</strong> UserTesting, Hotjar, Google Analytics</li>
+						<li><strong>Collaboration:</strong> Zeplin, Abstract, Version Control</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="doc-section">
+				<h3>Roles & Responsibilities</h3>
+				<div class="content-block roles">
+					<div class="role">
+						<h4>Research & Strategy</h4>
+						<ul>
+							<li>Conduct user research and usability testing</li>
+							<li>Create user personas and journey maps</li>
+							<li>Analyze competitor interfaces and features</li>
+							<li>Define project goals and success metrics</li>
+						</ul>
+					</div>
+
+					<div class="role">
+						<h4>Design & Implementation</h4>
+						<ul>
+							<li>Create wireframes and interactive prototypes</li>
+							<li>Design responsive interfaces for web and mobile</li>
+							<li>Develop and maintain design systems</li>
+							<li>Create animation and interaction specifications</li>
+						</ul>
+					</div>
+
+					<div class="role">
+						<h4>Collaboration & Leadership</h4>
+						<ul>
+							<li>Lead design reviews and feedback sessions</li>
+							<li>Collaborate with developers for implementation</li>
+							<li>Present designs to stakeholders</li>
+							<li>Mentor junior designers and students</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="doc-section">
+				<h3>Design Process Documentation</h3>
+				<div class="content-block process">
+					<ol>
+						<li>
+							<strong>Discovery & Research</strong>
+							<p>Comprehensive user research through interviews, surveys, and analytics to understand user needs and pain points.</p>
+						</li>
+						<li>
+							<strong>Definition & Planning</strong>
+							<p>Creating user personas, journey maps, and defining key features and functionality requirements.</p>
+						</li>
+						<li>
+							<strong>Design & Prototyping</strong>
+							<p>Iterative design process from low-fidelity wireframes to high-fidelity prototypes with user testing at each stage.</p>
+						</li>
+						<li>
+							<strong>Implementation & Testing</strong>
+							<p>Collaboration with development teams and conducting thorough usability testing.</p>
+						</li>
+						<li>
+							<strong>Launch & Iteration</strong>
+							<p>Monitoring user feedback and metrics post-launch for continuous improvement.</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 2rem;
+		width: 900px;
+		max-width: calc(100% - 2rem);
+		color: white;
+	}
+	.documentation {
+		margin-top: 2rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.doc-section {
+		margin-bottom: 3rem;
+	}
+	.doc-section h3 {
+		color: rgb(var(--accent-light));
+		font-size: 1.8rem;
+		margin-bottom: 1.5rem;
+	}
+	.content-block {
+		background: rgba(var(--accent-dark), 0.2);
+		padding: 2rem;
+		border-radius: 1rem;
+		margin-top: 1rem;
+	}
+	.content-block ul {
+		list-style: none;
+		padding: 0;
+	}
+	.content-block li {
+		margin: 0.8rem 0;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+	.content-block li:before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: rgb(var(--accent-light));
+	}
+	.roles {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.role h4 {
+		color: rgb(var(--accent-light));
+		margin-bottom: 1rem;
+	}
+	.process ol {
+		list-style: none;
+		counter-reset: process;
+		padding: 0;
+	}
+	.process li {
+		counter-increment: process;
+		margin: 1.5rem 0;
+		padding-left: 3rem;
+		position: relative;
+	}
+	.process li:before {
+		content: counter(process);
+		position: absolute;
+		left: 0;
+		width: 2rem;
+		height: 2rem;
+		background: rgb(var(--accent-light));
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: rgb(var(--accent-dark));
+		font-weight: bold;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>

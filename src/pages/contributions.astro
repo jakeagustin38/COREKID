@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfileHeader from '../components/ProfileHeader.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+---
+
+<Layout title="My Contributions - Jake Christon">
+	<main>
+		<ProfileHeader 
+			name="Jake Christon"
+			title="UI/UX Designer & BSIT Student"
+		/>
+
+		<section class="contributions">
+			<h2>My <span class="text-gradient">Contributions</span></h2>
+
+			<div class="projects-grid">
+				<CaseStudyCard
+					title="Student Portal Redesign"
+					description="Led the redesign of the university's student portal, improving user satisfaction by 85%."
+					image="/student-portal.png"
+					tags={['UX Research', 'UI Design', 'Mobile First']}
+				/>
+
+				<CaseStudyCard
+					title="Library Management System"
+					description="Designed an intuitive interface for the library management system, reducing task completion time by 40%."
+					image="/library-system.png"
+					tags={['System Design', 'User Testing', 'Accessibility']}
+				/>
+
+				<CaseStudyCard
+					title="Campus Navigation App"
+					description="Created a mobile app helping students navigate the campus efficiently."
+					image="/navigation-app.png"
+					tags={['Mobile Design', 'Wayfinding', 'User Research']}
+				/>
+			</div>
+
+			<div class="achievements">
+				<h3>Key Achievements</h3>
+				<ul>
+					<li>Best UI/UX Design Award - University Tech Fair 2023</li>
+					<li>Published research on mobile app usability in student portals</li>
+					<li>Led workshops on user-centered design for junior BSIT students</li>
+					<li>Contributed to the university's design system documentation</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 2rem;
+		width: 900px;
+		max-width: calc(100% - 2rem);
+		color: white;
+	}
+	.contributions {
+		margin-top: 2rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	.achievements {
+		background: rgba(var(--accent-dark), 0.2);
+		padding: 2rem;
+		border-radius: 1rem;
+		margin-top: 2rem;
+	}
+	.achievements h3 {
+		color: rgb(var(--accent-light));
+		margin-bottom: 1rem;
+	}
+	.achievements ul {
+		list-style: none;
+		padding: 0;
+	}
+	.achievements li {
+		margin: 0.5rem 0;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+	.achievements li:before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: rgb(var(--accent-light));
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>

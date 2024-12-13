@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProfileHeader from '../../components/ProfileHeader.astro';
+import CaseStudyCard from '../../components/CaseStudyCard.astro';
+---
+
+<Layout title="Student Portal Case Study - Jake Christon">
+    <main>
+        <ProfileHeader 
+            name="Jake Christon"
+            title="UI/UX Designer & BSIT Student"
+        />
+
+        <section class="case-study">
+            <h2>Student Portal Redesign Project</h2>
+            
+            <div class="project-overview">
+                <h3>Project Overview</h3>
+                <p>As a BSIT student, I identified the need to improve the student portal experience across both mobile and web platforms. This case study documents my approach to creating a seamless, user-friendly interface for students.</p>
+            </div>
+
+            <div class="platforms">
+                <div class="platform">
+                    <h3>Mobile App Design</h3>
+                    <CaseStudyCard
+                        title="Mobile Student Portal"
+                        description="A native mobile experience designed for quick access to essential student information and services."
+                        image="/mobile-portal.png"
+                        tags={['Mobile First', 'Native App', 'iOS & Android']}
+                    />
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Biometric login for secure access</li>
+                            <li>Push notifications for announcements</li>
+                            <li>Offline access to class schedules</li>
+                            <li>Mobile-optimized grade viewing</li>
+                            <li>Quick enrollment process</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="platform">
+                    <h3>Web Application</h3>
+                    <CaseStudyCard
+                        title="Web Student Portal"
+                        description="A comprehensive web platform providing full access to academic services and information."
+                        image="/web-portal.png"
+                        tags={['Responsive', 'Web App', 'Dashboard']}
+                    />
+                    <div class="key-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Interactive dashboard</li>
+                            <li>Advanced course management</li>
+                            <li>Document submission system</li>
+                            <li>Academic progress tracking</li>
+                            <li>Integration with learning platforms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="design-process">
+                <h3>Design Process</h3>
+                <ol>
+                    <li>
+                        <strong>Research Phase</strong>
+                        <p>Conducted surveys with 200+ students to understand pain points with existing portal</p>
+                    </li>
+                    <li>
+                        <strong>User Flow Mapping</strong>
+                        <p>Created detailed user flows for common tasks across both platforms</p>
+                    </li>
+                    <li>
+                        <strong>Wireframing</strong>
+                        <p>Developed low and high-fidelity wireframes using Figma</p>
+                    </li>
+                    <li>
+                        <strong>Prototyping</strong>
+                        <p>Built interactive prototypes for user testing</p>
+                    </li>
+                    <li>
+                        <strong>Testing & Iteration</strong>
+                        <p>Conducted usability testing with 50 students and implemented feedback</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 2rem;
+        width: 1000px;
+        max-width: calc(100% - 2rem);
+        color: white;
+    }
+    .case-study {
+        margin-top: 3rem;
+    }
+    .project-overview {
+        background: rgba(var(--accent-dark), 0.2);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+    }
+    .platforms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    .platform {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+    .key-features {
+        margin-top: 2rem;
+    }
+    .key-features ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .key-features li {
+        margin: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    .key-features li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--accent-light));
+    }
+    .design-process ol {
+        list-style-type: none;
+        counter-reset: steps;
+        padding: 0;
+    }
+    .design-process li {
+        counter-increment: steps;
+        margin: 1.5rem 0;
+        padding-left: 3rem;
+        position: relative;
+    }
+    .design-process li:before {
+        content: counter(steps);
+        position: absolute;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(var(--accent-dark));
+        font-weight: bold;
+    }
+</style>
